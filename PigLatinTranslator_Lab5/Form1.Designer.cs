@@ -64,6 +64,7 @@
             btnTranslate.TabIndex = 2;
             btnTranslate.Text = "&Translate";
             btnTranslate.UseVisualStyleBackColor = true;
+            btnTranslate.Click += btnTranslate_Click;
             // 
             // btnClear
             // 
@@ -73,6 +74,7 @@
             btnClear.TabIndex = 3;
             btnClear.Text = "&Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnExit
             // 
@@ -82,6 +84,7 @@
             btnExit.TabIndex = 4;
             btnExit.Text = "E&xit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // lblEnglishText
             // 
@@ -103,6 +106,7 @@
             // 
             // frmPigLatinTranslator
             // 
+            AcceptButton = btnTranslate;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnExit;
