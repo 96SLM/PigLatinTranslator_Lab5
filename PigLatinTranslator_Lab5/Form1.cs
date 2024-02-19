@@ -26,35 +26,37 @@ namespace PigLatinTranslator_Lab5
                 //check and remembers the word' case
                 for (int i = 0; i < engText.Length; i++)
                 {
-                   foreach(char c in engText[i])
-                   {
-                        if (c >= 65 && c <= 90)
+                    foreach (char c in engText[i])
+                    {
+                        if (c >= 65 || c <= 90)
                         {
-
+                            pigLat += engText[i] + "way";
                         }
-                        else if (c >= 69 && c <= 101)
+                        else if (c >= 69 || c <= 101)
                         {
-
+                            pigLat += engText[i] + "way";
                         }
-                        else if (c >= 73 && c <= 105)
+                        else if (c >= 73 || c <= 105)
                         {
-
+                            pigLat += engText[i] + "way";
                         }
-                        else if (c >= 79 && c <= 111)
+                        else if (c >= 79 || c <= 111)
                         {
-
+                            pigLat += engText[i] + "way";
                         }
-                        else if (c >= 85 && c <= 117)
+                        else if (c >= 85 || c <= 117)
                         {
-
+                            pigLat += engText[i] + "way";
                         }
-                        else if (c >= 89 && c <= 121)
+                        else if (c >= 89 || c <= 121)
                         {
-
+                            pigLat += engText[i] + "way";
                         }
-                   }
 
+                        MessageBox.Show(pigLat, "test");
+                    
 
+                    /*
                     if (engText[i].StartsWith('a') || engText[i].StartsWith('A'))
                     {
                         //use 'way' at end of strng
@@ -77,7 +79,8 @@ namespace PigLatinTranslator_Lab5
                         pigLat = engText[i] + "way";
                     }
 
-                    MessageBox.Show(pigLat, "test");
+                    MessageBox.Show(pigLat, "test");*/
+                    }
                 }
             }
             catch (Exception ex)
