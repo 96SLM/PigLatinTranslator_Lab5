@@ -32,23 +32,7 @@ namespace PigLatinTranslator_Lab5
                         {
                             pigLat += engText[i] + "way";
                         }
-                        else if (c >= 69 || c <= 101)
-                        {
-                            pigLat += engText[i] + "way";
-                        }
-                        else if (c >= 73 || c <= 105)
-                        {
-                            pigLat += engText[i] + "way";
-                        }
-                        else if (c >= 79 || c <= 111)
-                        {
-                            pigLat += engText[i] + "way";
-                        }
-                        else if (c >= 85 || c <= 117)
-                        {
-                            pigLat += engText[i] + "way";
-                        }
-                        else if (c >= 89 || c <= 121)
+                        else if( c>= 97 || c<= 122)
                         {
                             pigLat += engText[i] + "way";
                         }
