@@ -23,21 +23,39 @@ namespace PigLatinTranslator_Lab5
             string pigLat = "";
             try
             {
+                bool isCapital = false;
+                bool isVowel = false;
                 //check and remembers the word' case
                 for (int i = 0; i < engText.Length; i++)
                 {
                     foreach (char c in engText[i])
                     {
-                        if (c >= 65 || c <= 90)
+                        
+                       if (c >= 65 && c<= 90)
                         {
-                            pigLat += engText[i] + "way";
+                            isCapital = true;
+
+                            switch (c)
+                            {
+                                case 'A':
+                                    continue;
+                                case 'E':
+                                    continue;
+                                case 'I':
+                                    continue;
+                                case 'O':
+                                    continue;
+                                case 'U':
+                                    continue;
+
+                            }
                         }
-                        else if( c>= 97 || c<= 122)
+                        else
                         {
-                            pigLat += engText[i] + "way";
+                            isCapital = false;
                         }
 
-                        MessageBox.Show(pigLat, "test");
+                       
                     
 
                     /*
@@ -66,6 +84,7 @@ namespace PigLatinTranslator_Lab5
                     MessageBox.Show(pigLat, "test");*/
                     }
                 }
+                MessageBox.Show(pigLat, "test");
             }
             catch (Exception ex)
             {
