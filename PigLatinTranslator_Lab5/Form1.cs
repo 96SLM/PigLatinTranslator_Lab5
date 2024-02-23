@@ -11,84 +11,91 @@ namespace PigLatinTranslator_Lab5
         }
 
 
-    //brings words that start with a vowel, rearranges them and adds "way"
+        //method to store boolean of ic capital
+        public static bool isCapital(string eng)
+        {
+            bool isCap = false;
+           
 
+            return isCap;
+        }
     private void btnTranslate_Click(object sender, EventArgs e)
         {
             //stores the user's text
             string englishText = Convert.ToString(txtEnglishText.Text);
-
+            //declares the translation to pig latin
+            string pigLat = txtPigLatin.Text;
+            pigLat = "";
             //converts the strings into array
             string[] engText = englishText.Split();
-            string pigLat = "";
+            
             try
             {
+
+                                               
                 bool isCapital = false;
                 bool isVowel = false;
+                bool hasLetters = false;
+
                 //check and remembers the word' case
                 for (int i = 0; i < engText.Length; i++)
                 {
+                    
                     foreach (char c in engText[i])
                     {
                         
                        if (c >= 65 && c<= 90)
-                        {
+                       {
+                            hasLetters = true;
                             isCapital = true;
 
                             switch (c)
                             {
-                                case 'A':
-                                    continue;
+                                case 'A':                                   
+                                   // continue;
                                 case 'E':
-                                    continue;
+                                   // continue;
                                 case 'I':
-                                    continue;
+                                   // continue;
                                 case 'O':
-                                    continue;
+                                   // continue;
                                 case 'U':
+                                    isVowel = true;                                    
                                     continue;
 
                             }
+
+                            
+                       }
+                       else
+                       {
+                            hasLetters = false;
+                           isCapital = false;
+                            switch (c)
+                            {
+                                case 'a':
+                                // continue;
+                                case 'e':
+                                // continue;
+                                case 'i':
+                                // continue;
+                                case 'o':
+                                // continue;
+                                case 'u':
+                                    isVowel = true;
+                                    continue;
+
+                            }
+
                         }
-                        else
-                        {
-                            isCapital = false;
-                        }
 
-                       
-                    
-
-                    /*
-                    if (engText[i].StartsWith('a') || engText[i].StartsWith('A'))
-                    {
-                        //use 'way' at end of strng
-                        pigLat += engText[i] + "way";
-                    }
-                    else if (engText[i].StartsWith('e') || engText[i].StartsWith('E'))
-                    {
-                        pigLat += engText[i] + "way";
-                    }
-                    else if (engText[i].StartsWith('i') || engText[i].StartsWith('I'))
-                    {
-                        pigLat = engText[i] + "way";
-                    }
-                    else if (engText[i].StartsWith('o') || engText[i].StartsWith('O'))
-                    {
-                        pigLat = engText[i] + "way";
-                    }
-                    else if (engText[i].StartsWith('u') || engText[i].StartsWith('U'))
-                    {
-                        pigLat = engText[i] + "way";
-                    }
-
-                    MessageBox.Show(pigLat, "test");*/
                     }
                 }
-                MessageBox.Show(pigLat, "test");
+               MessageBox.Show(pigLat + isVowel + isCapital , "test");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("didn't work\n"+pigLat+"\n"+ex,"eRROR");
+                MessageBox.Show("did not work\n"+pigLat+"\n"+ex,"eRROR");
             }
             //check if chars in the string have a capital case
            
